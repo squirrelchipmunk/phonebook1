@@ -12,7 +12,7 @@
 	PersonVo personVo = new PersonVo(name, hp, company);
 	new PhoneDao().personInsert(personVo);
 	
-	// 현재 페이지에서 결과를 보여주지 않고 list를 보여주기
+	// 현재 페이지에서 결과를 보여주지 않고 list.jsp를 보여주기
 	response.sendRedirect("list.jsp");
 %>		
 	 
