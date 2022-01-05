@@ -1,13 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import = "com.javaex.dao.PhoneDao" %>
+<%@ page import = "com.javaex.vo.PersonVo" %>    
 
 <%
-	String name = request.getParameter("name");
-	String hp = request.getParameter("hp");
-	String company = request.getParameter("company");
-	String id = request.getParameter("id");
+	int id = Integer.parseInt(request.getParameter("id"));
+	PersonVo personVo = new PhoneDao().getPerson(id);
 %>    
-    
     
 <!DOCTYPE html>
 <html>
@@ -25,10 +24,10 @@
 	</p>
 	
 	<form action="update.jsp" method="get">
-		이름(name): <input type="text" name="name" value="<%=name%>" > <br>
-		핸드폰(hp): <input type="text" name="hp" value="<%=hp%>" > <br>
-		회사(company): <input type="text" name="company" value="<%=company%>" > <br>
-		코드(id): <input type="text" name="id" value="<%=id%>" readonly > <br>
+		이름(name): <input type="text" name="name" value="<%=personVo.getName()%>" > <br>
+		핸드폰(hp): <input type="text" name="hp" value="<%=personVo.getHp()%>" > <br>
+		회사(company): <input type="text" name="company" value="<%=personVo.getCompany()%>" > <br>
+		코드(id): <input type="text" name="id" value="<%=personVo.getPersonId()%>" readonly > <br>
 		<button type = submit> 수정 </button> <br><br>
 	</form>
 	

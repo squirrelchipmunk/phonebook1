@@ -41,7 +41,7 @@
 				<td><%=p.getCompany()%></td>
 			</tr>
 			<tr>
-				<td><button onclick="location.href='updateForm.jsp?id=<%=p.getPersonId()%>&name=<%=p.getName()%>&hp=<%=p.getHp()%>&company=<%=p.getCompany()%>'">수정</button></td>
+				<td><button onclick="location.href='updateForm.jsp?id=<%=p.getPersonId()%>'">수정</button></td>
 				<td><button onclick="location.href='delete.jsp?id=<%=p.getPersonId()%>'">삭제</button></td>
 			</tr>
 		</table>
