@@ -16,11 +16,11 @@
 		아래 항목을 기입하고 "등록" 버튼을 클릭하세요
 	</p>
 	
-	<form action="insertPerson.jsp" method="get">
-		이름(name): <input type="text" name="" value="" > <br>
-		핸드폰(hp): <input type="text" name="" value="" > <br>
-		회사(company): <input type="text" name="" value="" > <br>
-		<button type=submit> 등록 </button> <br><br>
+	<form action="insert.jsp" method="get">
+		이름(name): <input type="text" name="name" value="" > <br>
+		핸드폰(hp): <input type="text" name="hp" value="" > <br>
+		회사(company): <input type="text" name="company" value="" > <br>
+		<button type = submit> 등록 </button> <br><br>
 	</form>
 	
 

@@ -119,33 +119,7 @@ public class PhoneDao {
 	}
 
 	public List<PersonVo> personSelect() {
-		List<PersonVo> personList = new ArrayList<>();
-		
-		try {
-			getConnection();
-
-			String query ="";
-			query += " select person_id, "; // as 사용 가능
-			query += " 	 	  name, ";
-			query += " 		  hp, ";
-			query += " 		  company ";
-			query += " from person ";
-
-			pstmt = conn.prepareStatement(query);   
-			rs = pstmt.executeQuery();  
-			
-			while(rs.next()) { //			  person_id       name               hp            company
-				PersonVo vo = new PersonVo( rs.getInt(1), rs.getString(2), rs.getString(3), rs.getString(4) );
-				personList.add(vo);
-			}
-
-		} catch (SQLException e) {
-			System.out.println("error:" + e);
-		} 
-		
-		close();
-			
-		return personList;
+		return personSearch("");
 	}
 	
 	public List<PersonVo> personSearch(String key) {
